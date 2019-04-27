@@ -8,11 +8,11 @@
 
     <ImageView
         android:id="@+id/cover"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
+        app:srcCompat="@drawable/crash"
         android:padding="50dp"
-        app:srcCompat="@drawable/crash" />
+        android:layout_height="400dp"
+        android:layout_width="400dp"/>
 
     <TextView
         android:id="@+id/nombre"
@@ -39,7 +39,7 @@
         android:id="@+id/precio"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@id/nombre"
+        android:layout_below="@id/description"
         android:text="29.99$"
         android:layout_centerHorizontal="true"
         android:gravity="center_horizontal"

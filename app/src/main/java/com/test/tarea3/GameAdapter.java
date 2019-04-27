@@ -42,7 +42,7 @@ public class GameAdapter extends BaseAdapter {
 
             //Inflater nos permite usar un layout dentro de un componente
             LayoutInflater inflater = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
-            vista = inflater.inflate(R.layout.activity_main, null); //Cual layout y principal o no.
+            vista = inflater.inflate(R.layout.layout_game, null); //Cual layout y principal o no.
 
             viewHolder.cover = vista.findViewById(R.id.cover);
             viewHolder.precio = vista.findViewById(R.id.precio);
@@ -52,10 +52,10 @@ public class GameAdapter extends BaseAdapter {
             viewHolder = (ViewHolder) vista.getTag(); //Obtener el dato reciclado
         }
 
-        Juego cancionActual = items.get(position);
-        viewHolder.nombre.setText(cancionActual.getGameName());
-        viewHolder.precio.setText(cancionActual.getPrize());
-        viewHolder.cover.setImageResource(cancionActual.getCoverImage());
+        Juego juegoActual = items.get(position);
+        viewHolder.nombre.setText(juegoActual.getGameName());
+        viewHolder.precio.setText(juegoActual.getPrize()+ ".99");
+        viewHolder.cover.setImageResource(juegoActual.getCoverImage());
         return vista;
     }
 

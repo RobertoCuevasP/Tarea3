@@ -16,7 +16,6 @@ public class PlayActivity extends AppCompatActivity {
     private Context mContext;
 
     private ImageView cover;
-
     private TextView nombre;
     private TextView description;
     private TextView prize;
@@ -25,7 +24,7 @@ public class PlayActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.game_product_activity);
         mContext = this;
         initViews();
         addEvents();
@@ -45,7 +44,8 @@ public class PlayActivity extends AppCompatActivity {
         comprar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast.makeText(mContext, "Has Comprado " + nombre + ", felicidades! Vuelva pronto", Toast.LENGTH_LONG).show();
+                String gameChosen = nombre.getText().toString();
+                Toast.makeText(mContext, "Has Comprado " + gameChosen + ", ¡Felicidades! Vuelva pronto", Toast.LENGTH_LONG).show();
             }
         });
     }
@@ -54,7 +54,7 @@ public class PlayActivity extends AppCompatActivity {
         description.setText("Naughty Dog");
         nombre.setText("Crash");
         cover.setImageResource(R.drawable.crash);
-        prize.setText("29.99");
+        prize.setText("29");
     }
 
     private void receiveData() {
